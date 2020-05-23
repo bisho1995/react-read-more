@@ -46,8 +46,10 @@ export default function ReadMore({
 
   useEffect(() => {
     if (!showReadMore || !containerRef.current || !readMoreRef?.current) return
-    const divHeight = containerRef?.current?.clientHeight!
-    const refHeight = readMoreRef?.current?.clientHeight
+    const divHeight =
+      containerRef?.current?.clientHeight + containerRef?.current?.offsetTop
+    const refHeight =
+      readMoreRef?.current?.offsetTop + readMoreRef?.current?.clientHeight
 
     if (refHeight >= divHeight) setShowReadMore(false)
   }, [containerRef, readMoreRef])
