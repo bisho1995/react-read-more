@@ -12,7 +12,7 @@ export interface Props {
 }
 
 /**
- * todo: write docs
+ * todo: write docs, rewrite as class
  * children
  * readMoreText
  * lineHeight
@@ -37,8 +37,6 @@ export default function ReadMore({
   const containerRef = useRef<HTMLDivElement>(null)
   const readMoreRef = useRef<HTMLDivElement>(null)
 
-  if (!showReadMore) return children
-
   const handleReadMoreClick = (e: any) => {
     setShowReadMore(false)
     readMoreClick(e)
@@ -52,7 +50,9 @@ export default function ReadMore({
       readMoreRef?.current?.offsetTop + readMoreRef?.current?.clientHeight
 
     if (refHeight >= divHeight) setShowReadMore(false)
-  }, [containerRef, readMoreRef])
+  }, [containerRef, readMoreRef, showReadMore])
+
+  if (!showReadMore) return children
 
   return (
     <div
