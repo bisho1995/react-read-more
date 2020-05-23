@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 
 export interface Props {
   children: React.ReactNode
@@ -34,6 +34,8 @@ export default function ReadMore({
   readMoreStyles = {}
 }: Props) {
   const [showReadMore, setShowReadMore] = useState(true)
+  const containerRef = useRef<HTMLDivElement>(null)
+  const readMoreRef = useRef<HTMLDivElement>(null)
 
   if (!showReadMore) return children
 
@@ -41,6 +43,14 @@ export default function ReadMore({
     setShowReadMore(false)
     readMoreClick(e)
   }
+
+  useEffect(() => {
+    if (!showReadMore || !containerRef.current || !readMoreRef?.current) return
+    const divHeight = containerRef?.current?.clientHeight!
+    const refHeight = readMoreRef?.current?.clientHeight
+
+    if (refHeight >= divHeight) setShowReadMore(false)
+  }, [containerRef, readMoreRef])
 
   return (
     <div
@@ -51,7 +61,7 @@ export default function ReadMore({
         height: `${height}${unit}`
       }}
     >
-      <div>{children}</div>
+      <div ref={containerRef}>{children}</div>
       <div
         className={readMoreClass}
         onClick={handleReadMoreClick}
@@ -60,8 +70,12 @@ export default function ReadMore({
           bottom: 0,
           right: 0,
           cursor: 'pointer',
+          background: '#fff',
+          fontSize: 12,
+          lineHeight: 12,
           ...readMoreStyles
         }}
+        ref={readMoreRef}
       >
         {readMoreText}
       </div>

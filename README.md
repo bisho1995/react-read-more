@@ -16,14 +16,16 @@ npm install --save @bisho/react-read-more
 import React, { Component } from 'react'
 
 import MyComponent from '@bisho/react-read-more'
-import '@bisho/react-read-more/dist/index.css'
 
 class Example extends Component {
   render() {
-    return <div>
-    ...
-    <ReadMore
-          readMoreStyles={{ background: "#fff" /** white is the default color btw */ }}
+    return (
+      <div>
+        ...
+        <ReadMore
+          readMoreStyles={{
+            background: '#fff' /** white is the default color btw */
+          }}
           lineHeight={2}
           height={10}
         >
@@ -57,8 +59,9 @@ class Example extends Component {
             </li>
           </ol>
         </ReadMore>
-    ...
-    </div>
+        ...
+      </div>
+    )
   }
 }
 ```
