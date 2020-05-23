@@ -12,13 +12,7 @@ Check the [docs](https://bisho1995.github.io/react-read-more/)
 
 ## Example
 
-<iframe
-     src="https://codesandbox.io/embed/react-read-more-1-xftnp?autoresize=1&fontsize=14&hidenavigation=1&theme=dark&view=preview"
-     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
-     title="react-read-more-1"
-     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
-     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
-></iframe>
+Check the [codesandbox example](https://codesandbox.io/s/react-read-more-1-xftnp?from-embed)
 
 ## Install
 
