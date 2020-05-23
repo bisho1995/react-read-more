@@ -66,7 +66,7 @@ export default function ReadMore({
   return (
     <div
       style={{
-        position: 'absolute',
+        position: 'relative',
         overflow: 'hidden',
         lineHeight: `${lineHeight}${unit}`,
         height: `${height}${unit}`
