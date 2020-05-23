@@ -12,7 +12,7 @@ export interface Props {
     };
 }
 /**
- * todo: write docs
+ * todo: write docs, rewrite as class
  * children
  * readMoreText
  * lineHeight
