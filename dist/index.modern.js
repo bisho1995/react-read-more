@@ -1,6 +1,22 @@
 import React, { useState } from 'react';
 
-var styles = {"wrapper":"_1I_qj","read-more":"_3oG6o"};
+function _extends() {
+  _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  return _extends.apply(this, arguments);
+}
 
 function ReadMore(_ref) {
   var children = _ref.children,
@@ -31,15 +47,21 @@ function ReadMore(_ref) {
   };
 
   return React.createElement("div", {
-    className: styles.wrapper,
     style: {
+      position: 'absolute',
+      overflow: 'hidden',
       lineHeight: "" + lineHeight + unit,
       height: "" + height + unit
     }
   }, React.createElement("div", null, children), React.createElement("div", {
-    className: styles['read-more'] + " " + readMoreClass,
+    className: readMoreClass,
     onClick: handleReadMoreClick,
-    style: readMoreStyles
+    style: _extends({
+      position: 'absolute',
+      bottom: 0,
+      right: 0,
+      cursor: 'pointer'
+    }, readMoreStyles)
   }, readMoreText));
 }
 
