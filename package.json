@@ -1,6 +1,6 @@
 {
-  "name": "@bisho/react-read-more",
-  "version": "1.0.2",
+  "name": "@bisho1995/react-read-more",
+  "version": "0.0.0",
   "description": "Add a '...read more' text to your long content",
   "author": "Bisvarup Mukherjee <codeworks0301@gmail.com>",
   "homepage": "https://bisho1995.github.io/react-read-more/",
@@ -24,8 +24,6 @@
   "scripts": {
     "build": "microbundle-crl --no-compress --format modern,cjs",
     "start": "microbundle-crl watch --no-compress --format modern,cjs",
-    "prepublish": "run-s build",
-    "publish": "run-s publish",
     "test": "run-s test:unit test:lint test:build",
     "test:build": "run-s build",
     "test:lint": "eslint .",
@@ -37,7 +35,7 @@
     "github-push": "git push -u origin HEAD",
     "docs": "typedoc --out docs src",
     "prestd": "run-s build docs",
-    "std": "standard-version && npm publish --access public",
+    "std": "standard-version",
     "poststd": "git push --follow-tags origin master"
   },
   "peerDependencies": {
