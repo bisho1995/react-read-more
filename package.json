@@ -66,12 +66,11 @@
     "react-dom": "^16.13.1",
     "react-scripts": "^3.4.1",
     "standard-version": "^8.0.0",
-    "typedoc": "^0.17.7"
+    "typedoc": "^0.17.7",
+    "eslint-plugin-react-hooks": "^4.0.2"
   },
   "files": [
     "dist"
   ],
-  "dependencies": {
-    "eslint-plugin-react-hooks": "^4.0.2"
-  }
+  "dependencies": {}
 }
