@@ -1,6 +1,6 @@
 {
-  "name": "@bisho1995/react-read-more",
-  "version": "0.0.0",
+  "name": "@bisvarup/react-read-more",
+  "version": "0.0.1",
   "description": "Add a '...read more' text to your long content",
   "author": "Bisvarup Mukherjee <codeworks0301@gmail.com>",
   "homepage": "https://bisho1995.github.io/react-read-more/",
@@ -35,8 +35,8 @@
     "github-push": "git push -u origin HEAD",
     "docs": "typedoc --out docs src",
     "prestd": "run-s build docs",
-    "std": "standard-version",
-    "poststd": "git push --follow-tags origin master"
+    "std": "standard-version && npm publish --access public",
+    "poststd": "run-s deploy && git push --follow-tags origin master"
   },
   "peerDependencies": {
     "react": "^16.9.0"
