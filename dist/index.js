@@ -52,11 +52,11 @@ function ReadMore(_ref) {
   };
 
   React.useEffect(function () {
-    var _containerRef$current, _readMoreRef$current;
+    var _containerRef$current, _containerRef$current2, _readMoreRef$current, _readMoreRef$current2;
 
     if (!showReadMore || !containerRef.current || !(readMoreRef === null || readMoreRef === void 0 ? void 0 : readMoreRef.current)) return;
-    var divHeight = containerRef === null || containerRef === void 0 ? void 0 : (_containerRef$current = containerRef.current) === null || _containerRef$current === void 0 ? void 0 : _containerRef$current.clientHeight;
-    var refHeight = readMoreRef === null || readMoreRef === void 0 ? void 0 : (_readMoreRef$current = readMoreRef.current) === null || _readMoreRef$current === void 0 ? void 0 : _readMoreRef$current.clientHeight;
+    var divHeight = (containerRef === null || containerRef === void 0 ? void 0 : (_containerRef$current = containerRef.current) === null || _containerRef$current === void 0 ? void 0 : _containerRef$current.clientHeight) + (containerRef === null || containerRef === void 0 ? void 0 : (_containerRef$current2 = containerRef.current) === null || _containerRef$current2 === void 0 ? void 0 : _containerRef$current2.offsetTop);
+    var refHeight = (readMoreRef === null || readMoreRef === void 0 ? void 0 : (_readMoreRef$current = readMoreRef.current) === null || _readMoreRef$current === void 0 ? void 0 : _readMoreRef$current.offsetTop) + (readMoreRef === null || readMoreRef === void 0 ? void 0 : (_readMoreRef$current2 = readMoreRef.current) === null || _readMoreRef$current2 === void 0 ? void 0 : _readMoreRef$current2.clientHeight);
     if (refHeight >= divHeight) setShowReadMore(false);
   }, [containerRef, readMoreRef]);
   return React__default.createElement("div", {
