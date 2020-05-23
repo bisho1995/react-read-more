@@ -74,7 +74,7 @@ export default function ReadMore({
           cursor: 'pointer',
           background: '#fff',
           fontSize: 12,
-          lineHeight: 12,
+          lineHeight: '12px',
           ...readMoreStyles
         }}
         ref={readMoreRef}
