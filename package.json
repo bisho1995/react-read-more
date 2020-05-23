@@ -22,8 +22,8 @@
     "test:watch": "react-scripts test --env=jsdom",
     "predeploy": "cd example && yarn install && yarn run build",
     "deploy": "gh-pages -d example/build",
-    "pregithub-push": "run-s build && gaa && gcmsg build",
-    "github-push": "ggpush"
+    "pregithub-push": "run-s build && git add --all && git commit -m 'build'",
+    "github-push": "git push -u origin HEAD"
   },
   "peerDependencies": {
     "react": "^16.9.0"

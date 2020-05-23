@@ -42,6 +42,8 @@ function ReadMore(_ref) {
       showReadMore = _useState[0],
       setShowReadMore = _useState[1];
 
+  var containerRef = React.useRef(null);
+  var readMoreRef = React.useRef(null);
   if (!showReadMore) return children;
 
   var handleReadMoreClick = function handleReadMoreClick(e) {
@@ -49,6 +51,14 @@ function ReadMore(_ref) {
     readMoreClick(e);
   };
 
+  React.useEffect(function () {
+    var _containerRef$current, _readMoreRef$current;
+
+    if (!showReadMore || !containerRef.current || !(readMoreRef === null || readMoreRef === void 0 ? void 0 : readMoreRef.current)) return;
+    var divHeight = containerRef === null || containerRef === void 0 ? void 0 : (_containerRef$current = containerRef.current) === null || _containerRef$current === void 0 ? void 0 : _containerRef$current.clientHeight;
+    var refHeight = readMoreRef === null || readMoreRef === void 0 ? void 0 : (_readMoreRef$current = readMoreRef.current) === null || _readMoreRef$current === void 0 ? void 0 : _readMoreRef$current.clientHeight;
+    if (refHeight >= divHeight) setShowReadMore(false);
+  }, [containerRef, readMoreRef]);
   return React__default.createElement("div", {
     style: {
       position: 'absolute',
@@ -56,15 +66,21 @@ function ReadMore(_ref) {
       lineHeight: "" + lineHeight + unit,
       height: "" + height + unit
     }
-  }, React__default.createElement("div", null, children), React__default.createElement("div", {
+  }, React__default.createElement("div", {
+    ref: containerRef
+  }, children), React__default.createElement("div", {
     className: readMoreClass,
     onClick: handleReadMoreClick,
     style: _extends({
       position: 'absolute',
       bottom: 0,
       right: 0,
-      cursor: 'pointer'
-    }, readMoreStyles)
+      cursor: 'pointer',
+      background: '#fff',
+      fontSize: 12,
+      lineHeight: 12
+    }, readMoreStyles),
+    ref: readMoreRef
   }, readMoreText));
 }
 
