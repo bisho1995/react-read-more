@@ -61,7 +61,7 @@ function ReadMore(_ref) {
   if (!showReadMore) return children;
   return React__default.createElement("div", {
     style: {
-      position: 'absolute',
+      position: 'relative',
       overflow: 'hidden',
       lineHeight: "" + lineHeight + unit,
       height: "" + height + unit

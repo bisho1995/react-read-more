@@ -36,7 +36,7 @@
     "docs": "typedoc --out docs src",
     "prestd": "run-s build docs",
     "std": "standard-version && npm publish --access public",
-    "poststd": "run-s deploy && git push --follow-tags origin master"
+    "poststd": "run-s deploy && git push --follow-tags origin master && git add --all && git commit -m 'build' && git push origin HEAD"
   },
   "peerDependencies": {
     "react": "^16.9.0"
