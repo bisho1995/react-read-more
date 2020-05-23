@@ -77,8 +77,8 @@ function ReadMore(_ref) {
       right: 0,
       cursor: 'pointer',
       background: '#fff',
-      fontSize: 12,
-      lineHeight: '12px'
+      fontSize: "" + lineHeight + unit,
+      lineHeight: "" + lineHeight + unit
     }, readMoreStyles),
     ref: readMoreRef
   }, readMoreText));
