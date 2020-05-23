@@ -37,7 +37,7 @@
     "github-push": "git push -u origin HEAD",
     "docs": "typedoc --out docs src",
     "prestd": "run-s build docs",
-    "std": "standard-version && npm publish",
+    "std": "standard-version && npm publish --access public",
     "poststd": "git push --follow-tags origin master"
   },
   "peerDependencies": {
