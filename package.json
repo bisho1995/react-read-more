@@ -1,7 +1,7 @@
 {
   "name": "@bisho/react-read-more",
   "version": "1.0.0",
-  "description": "Add a readmore text to your long content",
+  "description": "Add a '...read more' text to your long content",
   "author": "bisho1995",
   "license": "MIT",
   "repository": "react-read-more",
@@ -20,10 +20,11 @@
     "test:lint": "eslint .",
     "test:unit": "cross-env CI=1 react-scripts test --env=jsdom",
     "test:watch": "react-scripts test --env=jsdom",
-    "predeploy": "cd example && yarn install && yarn run build",
-    "deploy": "gh-pages -d example/build",
+    "predeploy": "run-s docs",
+    "deploy": "gh-pages -d docs",
     "pregithub-push": "run-s build && git add --all && git commit -m 'build'",
-    "github-push": "git push -u origin HEAD"
+    "github-push": "git push -u origin HEAD",
+    "docs": "yarn typedoc --out docs src"
   },
   "peerDependencies": {
     "react": "^16.9.0"
@@ -51,7 +52,8 @@
     "prettier": "^2.0.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "^3.4.1"
+    "react-scripts": "^3.4.1",
+    "typedoc": "^0.17.7"
   },
   "files": [
     "dist"

@@ -6,13 +6,21 @@
 import React, { useState, useRef, useEffect } from 'react'
 
 export interface Props {
+  /** The component which you want to show an excerpt of. */
   children: React.ReactNode
+  /** The default value is '...read more' you may want to change this */
   readMoreText?: React.ReactNode
+  /** The line height size, default '1' */
   lineHeight?: number
+  /** The height of the excerpt to be shown initially, default '5' */
   height?: number
+  /** Unit of line height, by default it is 'rem' */
   unit?: string
+  /** Optionally add classes to the read more label, default is '' */
   readMoreClass?: string
+  /** Optionally do something on the click of read more, default noop */
   readMoreClick?: (e: Event) => void
+  /** Support for styles of read more, default {} */
   readMoreStyles?: { [x: string]: string }
 }
 
@@ -23,20 +31,10 @@ export interface Props {
  *
  * There is also a withReadMore HOC wrapper along with this file. They do the same thing
  * and usage depends on the choice of the user
- *
- * children: ReactNode - The component which you want to show an excerpt of.
- * readMoreText: ReactNode - The default value is '...see more' you may want to change this
- * lineHeight: Number - The line height size, default '1'
- * height: Number - The height of the excerpt to be shown initially, default '5'
- * unit: String - Unit of line height, by default it is 'rem'
- * readMoreClass: String - Optionally add classes to the read more label, default is ''
- * readMoreClick: function - Optionally do something on the click of read more, default noop
- * readMoreStyles: Object - Support for styles of read more, default {}
- * @param param0 props
  */
 export default function ReadMore({
   children,
-  readMoreText = '...see more',
+  readMoreText = '...read more',
   lineHeight = 1,
   height = 5,
   unit = 'rem',
