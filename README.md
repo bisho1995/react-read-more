@@ -1,8 +1,8 @@
-# @bisho1995/react-read-more
+# @bisvarup/react-read-more
 
 > Add a readmore text to your long content
 
-[![NPM](https://img.shields.io/npm/v/@bisho1995/react-read-more.svg)](https://www.npmjs.com/package/@bisho1995/react-read-more) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/@bisvarup/react-read-more.svg)](https://www.npmjs.com/package/@bisvarup/react-read-more) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 Wrap any component with this component to show a read more text. On clicking the read more text user will be able to see the full content. On full content is shown it cannot be reverted back.
 
@@ -15,7 +15,7 @@ Check the [docs](https://bisho1995.github.io/react-read-more/)
 Install with npm
 
 ```bash
-npm install --save @bisho1995/react-read-more
+npm install --save @bisvarup/react-read-more
 ```
 
 or
@@ -23,14 +23,14 @@ or
 Install with yarn
 
 ```bash
-yarn add @bisho1995/react-read-more
+yarn add @bisvarup/react-read-more
 ```
 
 ## Standard Usage
 
 ```tsx
 import React, { Component } from 'react'
-import ReadMore from '@bisho1995/react-read-more'
+import ReadMore from '@bisvarup/react-read-more'
 
 class Example extends Component {
   render() {
