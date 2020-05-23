@@ -1,0 +1,52 @@
+Arguments: 
+  /Users/bisvarup.m/.nvm/versions/node/v12.14.0/bin/node /usr/local/Cellar/yarn/1.22.0/libexec/bin/yarn.js install
+
+PATH: 
+  /var/folders/h6/9c6lh0s95c147yzws2shz_fw0s5htf/T/yarn--1590227419365-0.5503494952032684:/Users/bisvarup.m/Desktop/projects/react/projects/react-read-more/node_modules/.bin:/Users/bisvarup.m/.config/yarn/link/node_modules/.bin:/Users/bisvarup.m/.nvm/versions/node/v12.14.0/libexec/lib/node_modules/npm/bin/node-gyp-bin:/Users/bisvarup.m/.nvm/versions/node/v12.14.0/lib/node_modules/npm/bin/node-gyp-bin:/Users/bisvarup.m/.nvm/versions/node/v12.14.0/bin/node_modules/npm/bin/node-gyp-bin:/Users/bisvarup.m/.nvm/versions/node/v12.14.0/bin:/Library/Frameworks/Python.framework/Versions/3.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/bisvarup.m/.nvm/versions/node/v12.14.0/bin:/Library/Frameworks/Python.framework/Versions/3.7/bin
+
+Yarn version: 
+  1.22.0
+
+Node version: 
+  12.14.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: ENOENT: no such file or directory, lstat '/Users/bisvarup.m/Desktop/projects/react/projects/react-read-more/node_modules/react-scripts/node_modules/@babel/plugin-syntax-object-rest-spread'
+
+npm manifest: 
+  {
+    "name": "@bisho/react-read-more-example",
+    "homepage": "https://bisho1995.github.io/@bisho/react-read-more",
+    "version": "0.0.0",
+    "private": true,
+    "dependencies": {
+      "react": "link:../node_modules/react",
+      "react-dom": "link:../node_modules/react-dom",
+      "react-scripts": "link:../node_modules/react-scripts",
+      "@bisho/react-read-more": "link:.."
+    },
+    "scripts": {
+      "start": "node ../node_modules/react-scripts/bin/react-scripts.js start",
+      "build": "node ../node_modules/react-scripts/bin/react-scripts.js build",
+      "test": "node ../node_modules/react-scripts/bin/react-scripts.js test",
+      "eject": "node ../node_modules/react-scripts/bin/react-scripts.js eject"
+    },
+    "eslintConfig": {
+      "extends": "react-app"
+    },
+    "browserslist": [
+      ">0.2%",
+      "not dead",
+      "not ie <= 11",
+      "not op_mini all"
+    ]
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

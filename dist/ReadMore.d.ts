@@ -1,5 +1,5 @@
 import React from 'react';
-interface Props {
+export interface Props {
     children: React.ReactNode;
     readMoreText?: React.ReactNode;
     lineHeight?: number;
@@ -7,6 +7,20 @@ interface Props {
     unit?: string;
     readMoreClass?: string;
     readMoreClick?: (e: Event) => void;
+    readMoreStyles?: {
+        [x: string]: string;
+    };
 }
-declare const ReadMore: ({ children, readMoreText, lineHeight, height, unit, readMoreClass, readMoreClick }: Props) => {} | null | undefined;
-export default ReadMore;
+/**
+ * todo: write docs
+ * children
+ * readMoreText
+ * lineHeight
+ * height
+ * unit
+ * readMoreClass
+ * readMoreClick
+ * readMoreStyles
+ * @param param0 props
+ */
+export default function ReadMore({ children, readMoreText, lineHeight, height, unit, readMoreClass, readMoreClick, readMoreStyles }: Props): {} | null | undefined;

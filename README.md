@@ -20,7 +20,45 @@ import '@bisho/react-read-more/dist/index.css'
 
 class Example extends Component {
   render() {
-    return <MyComponent />
+    return <div>
+    ...
+    <ReadMore
+          readMoreStyles={{ background: "#fff" /** white is the default color btw */ }}
+          lineHeight={2}
+          height={10}
+        >
+          <ol>
+            <li>
+              This is one of the lines, aasfsfsafsas fhgsfhgsfgsi fis fgisgf
+            </li>
+            <li>
+              This is one of the lines, aasfsfsafsas fhgsfhgsfgsi fis fgisgf
+            </li>
+            <li>
+              This is one of the lines, aasfsfsafsas fhgsfhgsfgsi fis fgisgf
+            </li>
+            <li>
+              This is one of the lines, aasfsfsafsas fhgsfhgsfgsi fis fgisgf
+            </li>
+            <li>
+              This is one of the lines, aasfsfsafsas fhgsfhgsfgsi fis fgisgf
+            </li>
+            <li>
+              This is one of the lines, aasfsfsafsas fhgsfhgsfgsi fis fgisgf
+            </li>
+            <li>
+              This is one of the lines, aasfsfsafsas fhgsfhgsfgsi fis fgisgf
+            </li>
+            <li>
+              This is one of the lines, aasfsfsafsas fhgsfhgsfgsi fis fgisgf
+            </li>
+            <li>
+              This is one of the lines, aasfsfsafsas fhgsfhgsfgsi fis fgisgf
+            </li>
+          </ol>
+        </ReadMore>
+    ...
+    </div>
   }
 }
 ```

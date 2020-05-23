@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
-import styles from './styles.module.css'
 
-interface Props {
+export interface Props {
   children: React.ReactNode
   readMoreText?: React.ReactNode
   lineHeight?: number
@@ -12,6 +11,18 @@ interface Props {
   readMoreStyles?: { [x: string]: string }
 }
 
+/**
+ * todo: write docs
+ * children
+ * readMoreText
+ * lineHeight
+ * height
+ * unit
+ * readMoreClass
+ * readMoreClick
+ * readMoreStyles
+ * @param param0 props
+ */
 export default function ReadMore({
   children,
   readMoreText = '...see more',
@@ -33,14 +44,24 @@ export default function ReadMore({
 
   return (
     <div
-      className={styles.wrapper}
-      style={{ lineHeight: `${lineHeight}${unit}`, height: `${height}${unit}` }}
+      style={{
+        position: 'absolute',
+        overflow: 'hidden',
+        lineHeight: `${lineHeight}${unit}`,
+        height: `${height}${unit}`
+      }}
     >
       <div>{children}</div>
       <div
-        className={`${styles['read-more']} ${readMoreClass}`}
+        className={readMoreClass}
         onClick={handleReadMoreClick}
-        style={readMoreStyles}
+        style={{
+          position: 'absolute',
+          bottom: 0,
+          right: 0,
+          cursor: 'pointer',
+          ...readMoreStyles
+        }}
       >
         {readMoreText}
       </div>
