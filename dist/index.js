@@ -24,7 +24,7 @@ function _extends() {
 function ReadMore(_ref) {
   var children = _ref.children,
       _ref$readMoreText = _ref.readMoreText,
-      readMoreText = _ref$readMoreText === void 0 ? '...see more' : _ref$readMoreText,
+      readMoreText = _ref$readMoreText === void 0 ? '...read more' : _ref$readMoreText,
       _ref$lineHeight = _ref.lineHeight,
       lineHeight = _ref$lineHeight === void 0 ? 1 : _ref$lineHeight,
       _ref$height = _ref.height,

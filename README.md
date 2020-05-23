@@ -6,7 +6,9 @@
 
 Wrap any component with this component to show a read more text. On clicking the read more text user will be able to see the full content. On full content is shown it cannot be reverted back.
 
-There is also a withReadMore HOC wrapper along with this file. They do the same thing and usage depends on the choice of the user
+There is also a withReadMore HOC wrapper along with this file. They do the same thing and usage depends on the choice of the user.
+
+Check the [docs](https://bisho1995.github.io/react-read-more/)
 
 ## Install
 

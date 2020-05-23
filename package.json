@@ -2,11 +2,21 @@
   "name": "@bisho/react-read-more",
   "version": "1.0.0",
   "description": "Add a '...read more' text to your long content",
-  "author": "bisho1995",
+  "author": "Bisvarup Mukherjee <codeworks0301@gmail.com>",
+  "homepage": "https://bisho1995.github.io/react-read-more/",
+  "keywords": [
+    "read more",
+    "react read more",
+    "expand text"
+  ],
   "license": "MIT",
-  "repository": "react-read-more",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:bisho1995/react-read-more.git"
+  },
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
+  "types": "dist/index.d.ts",
   "source": "src/index.tsx",
   "engines": {
     "node": ">=10"
@@ -15,6 +25,7 @@
     "build": "microbundle-crl --no-compress --format modern,cjs",
     "start": "microbundle-crl watch --no-compress --format modern,cjs",
     "prepublish": "run-s build",
+    "publish": "run-s publish",
     "test": "run-s test:unit test:lint test:build",
     "test:build": "run-s build",
     "test:lint": "eslint .",
@@ -24,7 +35,10 @@
     "deploy": "gh-pages -d docs",
     "pregithub-push": "run-s build && git add --all && git commit -m 'build'",
     "github-push": "git push -u origin HEAD",
-    "docs": "yarn typedoc --out docs src"
+    "docs": "npm run typedoc --out docs src",
+    "prestd": "run-s build docs",
+    "std": "standard-version && npm publish",
+    "poststd": "git push --follow-tags origin master"
   },
   "peerDependencies": {
     "react": "^16.9.0"
@@ -53,6 +67,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "^3.4.1",
+    "standard-version": "^8.0.0",
     "typedoc": "^0.17.7"
   },
   "files": [
